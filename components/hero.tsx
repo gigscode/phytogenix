@@ -70,7 +70,7 @@ export function Hero() {
 
           {/* Subtext */}
           <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-            Virucidine provides an AI-powered ecosystem for managing
+            Virucidine provides an ecosystem for managing
             herbal formulations, laboratory analytics, participant
             monitoring, and clinical research operations with
             enterprise-grade efficiency.
