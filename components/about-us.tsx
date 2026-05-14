@@ -29,7 +29,7 @@ export function AboutSection() {
           {/* Heading */}
           <div>
             <h2 className="max-w-xl text-4xl font-bold leading-tight md:text-5xl">
-              AI-Powered Herbal Clinical Research
+              Research Driven Herbal Clinical Research
             </h2>
 
             <p className="mt-5 max-w-2xl text-lg text-[#667085]">
