@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Virucidine - Advanced Herbal Clinical Research Platform',
-  description: 'Virucidine is a cutting-edge platform for managing herbal clinical research, laboratory results, and regulatory compliance.',
+  title: 'PhytoGenix - Advanced Herbal Clinical Research Platform',
+  description: 'PhytoGenix is a cutting-edge platform for managing herbal clinical research, laboratory results, and regulatory compliance.',
   generator: 'v0.app',
   icons: {
     icon: [

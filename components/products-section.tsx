@@ -1,81 +1,92 @@
 'use client';
 
-import { Star } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Star, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-
-const products = [
-  {
-    id: 1,
-    name: 'CBD Oil Extract',
-    price: '$49.99',
-    rating: 4.8,
-    image: 'https://via.placeholder.com/300x350?text=CBD+Oil',
-  },
-  {
-    id: 2,
-    name: 'Herbal Remedy',
-    price: '$34.99',
-    rating: 4.9,
-    image: 'https://via.placeholder.com/300x350?text=Herbal+Remedy',
-  },
-  {
-    id: 3,
-    name: 'Wellness Tablets',
-    price: '$29.99',
-    rating: 4.7,
-    image: 'https://via.placeholder.com/300x350?text=Wellness+Tablets',
-  },
-];
+import Link from 'next/link';
+import { products } from '../lib/products';
 
 export function ProductsSection() {
   return (
-    <section className="w-full py-20 px-4 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section className="w-full py-24 px-4 bg-muted/30">
+      <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-secondary font-semibold text-sm mb-2">
-            Our New Products
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Research Formulations
-          </h2>
-          <div className="flex justify-center">
-            <div className="w-3 h-3 bg-secondary rounded-full" />
-          </div>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-emerald-600 font-bold text-sm tracking-widest uppercase mb-3">
+              Research Formulations
+            </p>
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground">
+              New Discoveries
+            </h2>
+          </motion.div>
+          <motion.div
+             initial={{ opacity: 0, x: 20 }}
+             whileInView={{ opacity: 1, x: 0 }}
+             viewport={{ once: true }}
+          >
+            <Button variant="outline" className="rounded-none border-emerald-500/20 hover:bg-emerald-500/10">
+              View All Products
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </motion.div>
         </div>
 
-        {/* Products */}
-        <div
-          className="
-            flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory
-            md:grid md:grid-cols-3 md:gap-6 md:overflow-visible
-          "
-        >
-          {products.map((product) => (
-            <div
+        {/* Products Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {products.map((product, i) => (
+            <motion.div
               key={product.id}
-              className="
-                min-w-[70%] sm:min-w-[50%] flex-shrink-0 snap-start
-                md:min-w-0 md:flex-shrink-0 group cursor-pointer
-              "
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
             >
-              <div className="relative overflow-hidden rounded-lg bg-muted mb-4 aspect-[3/4] flex items-center justify-center">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <Link
+                href={`/products/${product.id}`}
+                className="group block relative h-full"
+              >
+                <div className="relative overflow-hidden rounded-none bg-white border border-border shadow-sm group-hover:shadow-2xl transition-all duration-500 p-4">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-none mb-6">
+                    <motion.img
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 right-4 h-10 w-10 bg-white/90 backdrop-blur-md rounded-none flex items-center justify-center shadow-lg">
+                      <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                    </div>
+                  </div>
 
-              <div className="text-center">
-                <h3 className="font-semibold text-foreground mb-1">
-                  {product.name}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {product.price}
-                </p>
-              </div>
-            </div>
+                  <div className="px-4 pb-4">
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="text-xl font-bold text-foreground group-hover:text-emerald-600 transition-colors">
+                        {product.name}
+                      </h3>
+                      <span className="font-bold text-lg text-emerald-700">{product.price}</span>
+                    </div>
+                    <p className="text-muted-foreground text-sm line-clamp-2 mb-6">
+                      {product.description}
+                    </p>
+                    <div className="flex items-center text-sm font-bold text-emerald-600">
+                      Explore Details
+                      <motion.div
+                        initial={{ x: 0 }}
+                        whileHover={{ x: 5 }}
+                      >
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </motion.div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,69 +1,77 @@
-import { CheckCircle, ArrowRight } from "lucide-react";
+'use client';
+
+import { motion } from "framer-motion";
+import { ArrowRight, Globe, Zap, Users } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function CTASection() {
   return (
-    <section className="w-full bg-background">
-      <section className="relative min-h-[500px] h-[500px] overflow-hidden text-white">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center scale-105"
-        style={{
-          backgroundImage: "url('https://res.cloudinary.com/dsaqsxtup/image/upload/v1778521705/18426_ueg8rg.jpg')",
-        }}
-      />
+    <section className="relative py-24 overflow-hidden">
+      <div className="">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative rounded-none overflow-hidden bg-[#050816] min-h-[600px] flex items-center p-8 md:p-24"
+        >
+          {/* Background Image with Overlay */}
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-40"
+            style={{
+              backgroundImage: "url('https://res.cloudinary.com/dsaqsxtup/image/upload/v1778521705/18426_ueg8rg.jpg')",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050816] via-[#050816]/80 to-transparent" />
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/45" />
+          {/* Animated Background Blobs */}
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-emerald-500/20 rounded-full blur-[100px] animate-pulse" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-yellow-400/10 rounded-full blur-[100px] animate-pulse" />
 
-      {/* Soft gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />
-
- 
-
-      {/* Hero Content */}
-      <div className="relative z-20 mt-24 flex min-h-screen justify-start text-left">
-        <div className="max-w-5xl pl-24">
-          {/* Main Heading */}
-          <h1 className="text-5xl font-bold leading-none tracking-tight sm:text-6xl md:text-7xl lg:text-4xl">
-            Herbal Clinical <br />
-            Research Platform
-          </h1>
-
-          {/* Subtext */}
-          <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg">
-            Virucidine provides an AI-powered ecosystem for managing
-            herbal formulations, laboratory analytics, participant
-            monitoring, and clinical research operations with
-            enterprise-grade efficiency.
-          </p>
-
-          {/* Buttons */}
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Button
-              size="lg"
-              className="rounded-full bg-yellow-400 px-8 text-black hover:bg-yellow-300"
+          <div className="relative z-10 max-w-2xl space-y-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
             >
-              Launch Platform
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+              <h2 className="text-4xl md:text-7xl font-bold text-white leading-[1.1]">
+                Ready to Join the <br />
+                <span className="text-emerald-400">Future of Research?</span>
+              </h2>
+              <p className="mt-8 text-xl text-white/60 leading-relaxed">
+                Join our network of researchers and healthcare providers pioneering the next generation of herbal medicine.
+              </p>
+            </motion.div>
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-full border-white/20 bg-white/10 px-8 text-white backdrop-blur-md hover:bg-white/20"
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-wrap gap-4"
             >
-              View Research
-            </Button>
+              <Button
+                size="lg"
+                className="rounded-none bg-yellow-400 px-10 h-16 text-black font-bold hover:bg-yellow-300 transition-all hover:scale-105"
+              >
+                Launch Platform
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-none border-white/20 bg-white/10 px-10 h-16 text-white backdrop-blur-md hover:bg-white/20 transition-all"
+              >
+                Contact Sales
+              </Button>
+            </motion.div>
+
+            {/* Quick Stats */}
+          
           </div>
-
-      
-        </div>
+        </motion.div>
       </div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#050816] to-transparent" />
-    </section>
     </section>
   );
 }
