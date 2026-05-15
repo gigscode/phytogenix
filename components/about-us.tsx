@@ -42,19 +42,6 @@ export function AboutSection() {
           </motion.div>
         </div>
 
-<<<<<<< HEAD
-        {/* Right */}
-        <div className="space-y-8 px-6">
-          {/* Label */}
-          <div className="inline-flex items-center rounded-full bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-700">
-            WHO WE ARE
-          </div>
-
-          {/* Heading */}
-          <div>
-            <h2 className="max-w-xl text-4xl font-bold leading-tight md:text-5xl">
-              Research Driven Herbal Clinical Research
-=======
         {/* Right Content Section */}
         <div className="space-y-12">
           <motion.div
@@ -63,14 +50,13 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-3 rounded-md bg-emerald-50 px-5 py-2 text-sm font-bold text-emerald-700 mb-8 border border-emerald-100">
+            <div className="inline-flex items-center gap-3 rounded-sm bg-emerald-50 px-5 py-2 text-sm font-bold text-emerald-700 mb-8 border border-emerald-100">
               <span className="w-2 h-2 rounded-none bg-emerald-500 animate-ping" />
               WHO WE ARE
             </div>
             <h2 className="text-4xl font-bold leading-[1.1] md:text-6xl text-slate-900 mb-8">
               AI-Powered <br />
               <span className="text-emerald-600">Herbal Discovery</span>
->>>>>>> 8eac9ee (new ui)
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed">
               PhytoGenix is a digital herbal clinical research platform inspired by the collaborative work between Afe Babalola University and the Nigerian Institute of Medical Research. We modernize herbal medicine research using scalable digital infrastructure.
