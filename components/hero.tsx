@@ -1,8 +1,50 @@
 'use client';
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Menu } from "lucide-react";
 import { Button } from "./ui/button";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { products } from "@/lib/products";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+const TypewriterEffect = ({ words }: { words: string[] }) => {
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [reverse, setReverse] = useState(false);
+
+  useEffect(() => {
+    if (subIndex === words[index].length + 1 && !reverse) {
+      setTimeout(() => setReverse(true), 2000);
+      return;
+    }
+
+    if (subIndex === 0 && reverse) {
+      setReverse(false);
+      setIndex((prev) => (prev + 1) % words.length);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (reverse ? -1 : 1));
+    }, Math.max(reverse ? 75 : subIndex === words[index].length ? 1000 : 150, parseInt((Math.random() * 50).toFixed(0))));
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, index, reverse, words]);
+
+  return (
+    <span className="text-emerald-500">
+      {words[index].substring(0, subIndex)}
+      <span className="animate-pulse">|</span>
+    </span>
+  );
+};
 
 export function Hero() {
   const { scrollY } = useScroll();
@@ -49,19 +91,69 @@ export function Hero() {
           </div>
 
           {/* Nav */}
-          <nav className="hidden items-center gap-10 text-sm text-white/80 lg:flex">
-            {['Homepage', 'About Us', 'Research', 'Clinical Trials', 'Contact'].map((item) => (
-              <a key={item} href="#" className="transition hover:text-white relative group">
-                {item}
+          <nav className="hidden items-center gap-8 text-sm text-white/80 lg:flex">
+            <Link href="#about" className="transition hover:text-white relative group">
+              About Us
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all group-hover:w-full" />
+            </Link>
+            {products.map((product) => (
+              <Link 
+                key={product.id} 
+                href={`/products/${product.id}`} 
+                className="transition hover:text-white relative group"
+              >
+                {product.name.split(' - ')[0]}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all group-hover:w-full" />
-              </a>
+              </Link>
             ))}
+            <Link href="#contact" className="transition hover:text-white relative group">
+              Contact Us
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all group-hover:w-full" />
+            </Link>
           </nav>
 
-          {/* CTA */}
-          <Button className="rounded-none bg-yellow-400 px-6 text-black hover:bg-yellow-300 transition-transform hover:scale-105 active:scale-95">
-            Get Started
-          </Button>
+          {/* CTA & Mobile Menu */}
+          <div className="flex items-center gap-4">
+            <Button className="hidden md:flex rounded-none bg-yellow-400 px-6 text-black hover:bg-yellow-300 transition-transform hover:scale-105 active:scale-95">
+              Get Started
+            </Button>
+
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden text-white hover:bg-white/10">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] bg-[#050816] border-white/10 text-white p-10">
+                <SheetHeader className="mb-8 text-left">
+                  <SheetTitle className="text-white flex items-center gap-2">
+                    <div className="h-6 w-6 rounded-none bg-emerald-500" />
+                    Phytogenix
+                  </SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col gap-6">
+                  <Link href="#about" className="text-lg font-medium text-white/70 hover:text-emerald-400 transition-colors">
+                    About Us
+                  </Link>
+                  {products.map((product) => (
+                    <Link 
+                      key={product.id} 
+                      href={`/products/${product.id}`} 
+                      className="text-lg font-medium text-white/70 hover:text-emerald-400 transition-colors"
+                    >
+                      {product.name.split(' - ')[0]}
+                    </Link>
+                  ))}
+                  <Link href="#contact" className="text-lg font-medium text-white/70 hover:text-emerald-400 transition-colors">
+                    Contact Us
+                  </Link>
+                  <Button className="mt-4 rounded-none bg-yellow-400 text-black hover:bg-yellow-300 w-full">
+                    Get Started
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </motion.div>
       </header>
 
@@ -79,7 +171,7 @@ export function Hero() {
             className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60"
           >
             Herbal Clinical <br />
-            Research Platform
+            <TypewriterEffect words={["Research Platform", "Trial Ecosystem", "AI Discovery", "Lab Analytics"]} />
           </motion.h1>
 
           {/* Subtext */}
@@ -113,7 +205,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="rounded-none border-white/20 bg-white/10 px-8 h-14 text-white backdrop-blur-md hover:bg-white/20 transition-all hover:scale-105"
+              className="hidden md:block rounded-none border-white/20 bg-white/10 px-8 h-14 text-white backdrop-blur-md hover:bg-white/20 transition-all hover:scale-105"
             >
               View Research
             </Button>
@@ -124,7 +216,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-16 flex flex-wrap items-center justify-center gap-10 text-center"
+            className="mt-16 hidden md:flex flex-wrap items-center justify-center gap-10 text-center"
           >
             {[
               ["44+", "Participants"],

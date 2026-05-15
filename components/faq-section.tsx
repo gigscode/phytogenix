@@ -43,7 +43,7 @@ export function FAQSection() {
             viewport={{ once: true }}
             className="inline-flex items-center justify-center w-12 h-12 rounded-none bg-emerald-500/10 text-emerald-600 mb-6"
           >
-            <HelpCircle className="w-6 h-6" />
+            <HelpCircle className="w-6 h-6 rounded-full" />
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

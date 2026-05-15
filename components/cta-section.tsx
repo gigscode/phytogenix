@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 export function CTASection() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-0 overflow-hidden">
       <div className="">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
@@ -61,7 +61,7 @@ export function CTASection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="rounded-none border-white/20 bg-white/10 px-10 h-16 text-white backdrop-blur-md hover:bg-white/20 transition-all"
+                className="rounded-none hidden md:block border-white/20 bg-white/10 px-10 h-16 text-white backdrop-blur-md hover:bg-white/20 transition-all"
               >
                 Contact Sales
               </Button>
