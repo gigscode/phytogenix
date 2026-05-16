@@ -79,7 +79,7 @@ export function Footer() {
 
           {/* Big Bold Brand Name */}
           <div className="w-full select-none pointer-events-none overflow-hidden">
-            <h2 className="text-[12vw] md:text-[18vw] font-black text-white/[0.03] leading-none tracking-tighter text-center uppercase translate-y-8">
+            <h2 className="text-[12vw] md:text-[18vw] font-black text-white/[0.5] leading-none tracking-tighter text-center uppercase translate-y-8">
               PhytoGenix
             </h2>
           </div>
