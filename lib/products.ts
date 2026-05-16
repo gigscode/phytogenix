@@ -1,13 +1,27 @@
 export const products = [
   {
     id: 1,
-    name: 'AB Animation - Anti-ageing',
+    name: 'AB Health Animation',
     price: 'N25,000',
     rating: 4.9,
     image: '/ABAnim.png',
-    description: 'A cellular rejuvenation formula developed through phytochemical research at ABUAD\'s Bogoro Research Institute. AB Animation focuses on reversing oxidative stress and enhancing skin elasticity at a genomic level.',
-    benefits: ['Reverses cellular aging', 'Increases collagen synthesis', 'Protects against UV damage'],
-    ingredients: ['Bio-active Peptides', 'Hyaluronic Acid', 'Resveratrol', 'Vitamin E'],
+    description: 'AB Health Animation is a 100% plant-based anti-aging capsule developed at ABUAD\'s Bogoro Research Institute. Each 250mg capsule blends three powerful West African botanicals — traditionally used for inflammation, cellular health, and metabolic balance — into a single daily supplement. 60 capsules per pack. No chemical additives.',
+    benefits: [
+      'Combats oxidative stress and cellular aging',
+      'Anti-inflammatory support from three proven botanicals',
+      'Supports metabolic and blood sugar balance',
+      'Promotes digestive health and microbial defence',
+      '100% plant-based — no chemical additives',
+    ],
+    ingredients: [
+      'Nauclea latifolia (African Peach) — anti-inflammatory & analgesic',
+      'Ocimum gratissimum (Scent Leaf) — digestive health & antimicrobial',
+      'Anacardium occidentale (Cashew Extract) — blood sugar & inflammation support',
+    ],
+    badge: 'Made in Nigeria',
+    cta: 'Not recommended for pregnant women, breastfeeding mothers, or children under 12. Store in a cool, dry place away from direct sunlight. Keep out of reach of children.',
+    dosage: 'Take one capsule once daily after meals.',
+    count: '60 capsules per pack',
   },
   {
     id: 2,

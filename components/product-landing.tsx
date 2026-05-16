@@ -30,6 +30,8 @@ interface Product {
   ingredients: string[];
   badge?: string;
   cta?: string;
+  dosage?: string;
+  count?: string;
 }
 
 export function ProductLanding({ product }: { product: Product }) {
@@ -224,6 +226,16 @@ export function ProductLanding({ product }: { product: Product }) {
                   </div>
                 ))}
               </div>
+              {(product.dosage || product.count) && (
+                <div className="mt-6 p-5 rounded-2xl bg-emerald-50 border border-emerald-100 space-y-2">
+                  {product.count && (
+                    <p className="text-sm text-emerald-800"><span className="font-bold">Pack size:</span> {product.count}</p>
+                  )}
+                  {product.dosage && (
+                    <p className="text-sm text-emerald-800"><span className="font-bold">Dosage:</span> {product.dosage}</p>
+                  )}
+                </div>
+              )}
             </div>
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="space-y-4">
