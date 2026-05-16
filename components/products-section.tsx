@@ -29,7 +29,7 @@ export function ProductsSection() {
              whileInView={{ opacity: 1, x: 0 }}
              viewport={{ once: true }}
           >
-            <Button variant="outline" className="rounded-none border-emerald-500/20 hover:bg-emerald-500/10">
+            <Button variant="outline" className="rounded-full border-emerald-500/20 hover:bg-emerald-500/10">
               View All Products
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
@@ -50,8 +50,8 @@ export function ProductsSection() {
                 href={`/products/${product.id}`}
                 className="group block relative h-full"
               >
-                <div className="relative overflow-hidden rounded-none bg-white border border-border shadow-sm group-hover:shadow-2xl transition-all duration-500 p-4">
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-none mb-6">
+                <div className="relative overflow-hidden rounded-2xl bg-white border border-border shadow-sm group-hover:shadow-2xl transition-all duration-500 p-4">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl mb-6">
                     <motion.img
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
@@ -59,7 +59,7 @@ export function ProductsSection() {
                       alt={product.name}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute top-4 right-4 h-10 w-10 bg-white/90 backdrop-blur-md rounded-none flex items-center justify-center shadow-lg">
+                    <div className="absolute top-4 right-4 h-10 w-10 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg">
                       <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
                     </div>
                   </div>

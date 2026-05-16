@@ -89,7 +89,7 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.2 }}
-                className={`group relative rounded-sm ${card.color} p-10 ${card.textColor} shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default overflow-hidden`}
+                className={`group relative rounded-2xl ${card.color} p-10 ${card.textColor} shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-default overflow-hidden`}
               >
                 {/* Decorative background glow */}
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/5 rounded-none group-hover:scale-150 transition-transform duration-700" />

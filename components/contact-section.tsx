@@ -58,7 +58,7 @@ export function ContactSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15 }}
-                className="p-8 border border-slate-100 bg-slate-50 hover:border-emerald-200 hover:bg-emerald-50/30 transition-colors"
+                className="p-8 border border-slate-100 bg-slate-50 rounded-2xl hover:border-emerald-200 hover:bg-emerald-50/30 transition-colors"
               >
                 <h3 className="font-bold text-lg text-slate-900 mb-5">{c.label}</h3>
                 <ul className="space-y-4 text-sm text-slate-600">
@@ -92,7 +92,7 @@ export function ContactSection() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-slate-900 p-10 text-white"
+            className="bg-slate-900 p-10 text-white rounded-2xl"
           >
             <h3 className="text-2xl font-bold mb-2">Send an Enquiry</h3>
             <p className="text-white/50 text-sm mb-8">For bulk orders, partnerships, or research collaboration.</p>
@@ -100,30 +100,30 @@ export function ContactSection() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-white/50">First Name</label>
-                  <Input placeholder="Emeka" className="bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-none h-12" />
+                  <Input placeholder="Emeka" className="bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-lg h-12" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-white/50">Last Name</label>
-                  <Input placeholder="Okafor" className="bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-none h-12" />
+                  <Input placeholder="Okafor" className="bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-lg h-12" />
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-white/50">Email Address</label>
-                <Input type="email" placeholder="emeka@example.com" className="bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-none h-12" />
+                <Input type="email" placeholder="emeka@example.com" className="bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-lg h-12" />
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-white/50">Organisation / State</label>
-                <Input placeholder="e.g. Lagos State Ministry of Health" className="bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-none h-12" />
+                <Input placeholder="e.g. Lagos State Ministry of Health" className="bg-white/5 border-white/10 text-white placeholder:text-white/20 rounded-lg h-12" />
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-white/50">Message</label>
                 <textarea
                   rows={4}
                   placeholder="Tell us about your enquiry — product order, distribution, or research partnership..."
-                  className="w-full bg-white/5 border border-white/10 text-white placeholder:text-white/20 rounded-none px-4 py-3 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  className="w-full bg-white/5 border border-white/10 text-white placeholder:text-white/20 rounded-lg px-4 py-3 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-emerald-500"
                 />
               </div>
-              <Button className="w-full h-12 rounded-none bg-emerald-500 hover:bg-emerald-400 text-white font-bold">
+              <Button className="w-full h-12 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white font-bold">
                 Send Enquiry
               </Button>
             </form>

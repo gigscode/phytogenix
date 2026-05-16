@@ -112,7 +112,7 @@ export function Hero() {
 
           {/* CTA & Mobile Menu */}
           <div className="flex items-center gap-4">
-            <Button className="hidden md:flex rounded-none bg-yellow-400 px-6 text-black hover:bg-yellow-300 transition-transform hover:scale-105 active:scale-95">
+            <Button className="hidden md:flex rounded-full bg-yellow-400 px-6 text-black hover:bg-yellow-300 transition-transform hover:scale-105 active:scale-95">
               Order Now
             </Button>
 
@@ -147,7 +147,7 @@ export function Hero() {
                   <Link href="#contact" className="text-lg font-medium text-white/70 hover:text-emerald-400 transition-colors">
                     Contact Us
                   </Link>
-                  <Button className="mt-4 rounded-none bg-yellow-400 text-black hover:bg-yellow-300 w-full">
+                  <Button className="mt-4 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 w-full">
                     Order Now
                   </Button>
                 </nav>
@@ -193,7 +193,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="rounded-none bg-yellow-400 px-8 h-14 text-black hover:bg-yellow-300 shadow-xl shadow-yellow-400/20 transition-all hover:scale-105"
+              className="rounded-full bg-yellow-400 px-8 h-14 text-black hover:bg-yellow-300 shadow-xl shadow-yellow-400/20 transition-all hover:scale-105"
             >
               Explore Products
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -202,7 +202,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="hidden md:block rounded-none border-white/20 bg-white/10 px-8 h-14 text-white backdrop-blur-md hover:bg-white/20 transition-all hover:scale-105"
+              className="hidden md:block rounded-full border-white/20 bg-white/10 px-8 h-14 text-white backdrop-blur-md hover:bg-white/20 transition-all hover:scale-105"
             >
               View Research
             </Button>

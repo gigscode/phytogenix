@@ -53,7 +53,7 @@ export function CTASection() {
             >
               <Button
                 size="lg"
-                className="rounded-none bg-yellow-400 px-10 h-16 text-black font-bold hover:bg-yellow-300 transition-all hover:scale-105"
+                className="rounded-full bg-yellow-400 px-10 h-16 text-black font-bold hover:bg-yellow-300 transition-all hover:scale-105"
               >
                 Explore Products
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -61,7 +61,7 @@ export function CTASection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="rounded-none hidden md:block border-white/20 bg-white/10 px-10 h-16 text-white backdrop-blur-md hover:bg-white/20 transition-all"
+                className="rounded-full hidden md:block border-white/20 bg-white/10 px-10 h-16 text-white backdrop-blur-md hover:bg-white/20 transition-all"
               >
                 Contact Us
               </Button>
