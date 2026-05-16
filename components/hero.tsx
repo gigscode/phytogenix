@@ -83,12 +83,10 @@ export function Hero() {
           className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6"
         >
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <div className="h-9 w-9 rounded-none bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.5)]" />
-            <h1 className="text-lg font-semibold tracking-wide">
-              Phytogenix
-            </h1>
-          </div>
+            <h1 className="text-lg font-semibold tracking-wide">Phytogenix</h1>
+          </Link>
 
           {/* Nav */}
           <nav className="hidden items-center gap-8 text-sm text-white/80 lg:flex">
@@ -115,7 +113,7 @@ export function Hero() {
           {/* CTA & Mobile Menu */}
           <div className="flex items-center gap-4">
             <Button className="hidden md:flex rounded-none bg-yellow-400 px-6 text-black hover:bg-yellow-300 transition-transform hover:scale-105 active:scale-95">
-              Get Started
+              Order Now
             </Button>
 
             <Sheet>
@@ -127,8 +125,10 @@ export function Hero() {
               <SheetContent side="right" className="w-[300px] bg-[#050816] border-white/10 text-white p-10">
                 <SheetHeader className="mb-8 text-left">
                   <SheetTitle className="text-white flex items-center gap-2">
-                    <div className="h-6 w-6 rounded-none bg-emerald-500" />
-                    Phytogenix
+                    <Link href="/" className="flex items-center gap-2">
+                      <div className="h-6 w-6 rounded-none bg-emerald-500" />
+                      Phytogenix
+                    </Link>
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col gap-6">
@@ -148,7 +148,7 @@ export function Hero() {
                     Contact Us
                   </Link>
                   <Button className="mt-4 rounded-none bg-yellow-400 text-black hover:bg-yellow-300 w-full">
-                    Get Started
+                    Order Now
                   </Button>
                 </nav>
               </SheetContent>
@@ -171,7 +171,7 @@ export function Hero() {
             className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60"
           >
             Herbal Clinical <br />
-            <TypewriterEffect words={["Research Platform", "Trial Ecosystem", "AI Discovery", "Lab Analytics"]} />
+            <TypewriterEffect words={["Research Platform", "Trial Ecosystem", "Herbal Discovery", "Lab Analytics"]} />
           </motion.h1>
 
           {/* Subtext */}
@@ -181,10 +181,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-white/75 md:text-lg"
           >
-            Virucidine provides an ecosystem for managing
-            herbal formulations, laboratory analytics, participant
-            monitoring, and clinical research operations with
-            enterprise-grade efficiency.
+            PhytoGenix brings Nigeria's most promising plant-based medicines to the world — NAFDAC-approved, university-researched, and built for every Nigerian home.
           </motion.p>
 
           {/* Buttons */}
@@ -198,7 +195,7 @@ export function Hero() {
               size="lg"
               className="rounded-none bg-yellow-400 px-8 h-14 text-black hover:bg-yellow-300 shadow-xl shadow-yellow-400/20 transition-all hover:scale-105"
             >
-              Launch Platform
+              Explore Products
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
 

@@ -11,8 +11,8 @@ import { HelpCircle } from 'lucide-react';
 
 const faqs = [
   {
-    question: "How does the AI optimize herbal formulations?",
-    answer: "Our AI analysis platform uses predictive algorithms to simulate molecular interactions between botanical compounds and human biological markers, ensuring maximum efficacy and safety before physical trials begin."
+    question: "How does ABUAD develop its herbal formulations?",
+    answer: "The Bogoro Research Institute at ABUAD uses rigorous phytochemical analysis and molecular testing to identify active compounds in botanical plants, ensuring maximum efficacy and safety before clinical trials begin."
   },
   {
     question: "Are your clinical trials internationally recognized?",
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "What makes PhytoGenix different from traditional labs?",
-    answer: "We bridge the gap between traditional herbal wisdom and modern digital infrastructure, providing transparency, speed, and AI-driven insights that traditional laboratory methods cannot match."
+    answer: "We bridge the gap between traditional herbal wisdom and modern scientific research, providing transparency, rigorous clinical validation, and evidence-based insights that traditional laboratory methods cannot match."
   }
 ];
 

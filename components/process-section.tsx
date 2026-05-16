@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     title: "Sourcing & Identification",
-    description: "Ethically sourcing rare botanicals and using AI to identify active molecular compounds.",
+    description: "Ethically sourcing rare botanicals and conducting phytochemical screening to identify active molecular compounds.",
     image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=400",
     color: "bg-emerald-500"
   },
@@ -17,7 +17,7 @@ const steps = [
   },
   {
     title: "Predictive Modeling",
-    description: "Simulating biological interactions using proprietary AI algorithms before clinical trials.",
+    description: "Simulating biological interactions through evidence-based pharmacological research at ABUAD's Bogoro Research Centre before clinical trials.",
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400",
     color: "bg-purple-500"
   },

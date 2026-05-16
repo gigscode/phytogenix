@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import {
   Shield,
@@ -27,6 +28,8 @@ interface Product {
   description: string;
   benefits: string[];
   ingredients: string[];
+  badge?: string;
+  cta?: string;
 }
 
 export function ProductLanding({ product }: { product: Product }) {
@@ -47,9 +50,11 @@ export function ProductLanding({ product }: { product: Product }) {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              PhytoGenix
-            </span>
+            <Link href="/" className="flex items-center gap-2">
+              <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                PhytoGenix
+              </span>
+            </Link>
             <div className="h-4 w-[1px] bg-border mx-2 hidden sm:block" />
             <span className="text-sm font-medium text-muted-foreground hidden sm:block truncate max-w-[150px]">
               {product.name}
@@ -58,7 +63,7 @@ export function ProductLanding({ product }: { product: Product }) {
           <div className="flex items-center gap-4">
             <span className="font-bold hidden md:block">{product.price}</span>
             <Button onClick={scrollToCheckout} size="sm" className="rounded-full px-6">
-              Get Started
+              Order Now
             </Button>
           </div>
         </div>
@@ -78,7 +83,7 @@ export function ProductLanding({ product }: { product: Product }) {
             >
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6">
                 <Star className="w-3 h-3 fill-primary" />
-                Top Rated Formulation
+                {product.badge ?? 'Top Rated Formulation'}
               </div>
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-foreground">
                 {product.name}
@@ -118,7 +123,7 @@ export function ProductLanding({ product }: { product: Product }) {
                 ))}
               </div>
               <p className="text-sm text-muted-foreground">
-                <span className="font-bold text-foreground">500+</span> individuals trust this formulation
+                <span className="font-bold text-foreground">500+</span> Nigerians trust this formulation
               </p>
             </motion.div>
           </div>
@@ -139,12 +144,20 @@ export function ProductLanding({ product }: { product: Product }) {
               <div className="absolute bottom-6 left-6 right-6 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl">
                 <div className="flex justify-between items-end">
                   <div>
-                    <p className="text-white/60 text-xs font-bold uppercase tracking-wider mb-1">Purity Level</p>
-                    <p className="text-white text-2xl font-bold">99.8%</p>
+                    <p className="text-white/60 text-xs font-bold uppercase tracking-wider mb-1">
+                      {product.id === 3 ? 'Origin' : 'Purity Level'}
+                    </p>
+                    <p className="text-white text-2xl font-bold">
+                      {product.id === 3 ? 'Nigeria' : '99.8%'}
+                    </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-white/60 text-xs font-bold uppercase tracking-wider mb-1">Verified By</p>
-                    <p className="text-white font-bold">BioLab AI</p>
+                    <p className="text-white/60 text-xs font-bold uppercase tracking-wider mb-1">
+                      {product.id === 3 ? 'Approved By' : 'Verified By'}
+                    </p>
+                    <p className="text-white font-bold">
+                      {product.id === 3 ? 'NAFDAC' : 'ABUAD Verified'}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -161,9 +174,13 @@ export function ProductLanding({ product }: { product: Product }) {
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Engineered for Results</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              {product.id === 3 ? 'Why Nigeria Needs AB-MaL' : 'Engineered for Results'}
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our formulation goes through rigorous clinical validation to ensure maximum efficacy and safety.
+              {product.id === 3
+                ? 'Malaria kills thousands of Nigerians every year. AB-MaL is ABUAD\'s answer — a clinically researched, plant-based capsule built to prevent and treat malaria affordably, nationwide.'
+                : 'Our formulation goes through rigorous clinical validation to ensure maximum efficacy and safety.'}
             </p>
           </div>
 
@@ -182,7 +199,9 @@ export function ProductLanding({ product }: { product: Product }) {
                 </div>
                 <h3 className="text-xl font-bold mb-3">{benefit}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Scientifically backed methodology ensures that this benefit is realized through sustained use and cellular adaptation.
+                  {product.id === 3
+                    ? 'Researched and validated at ABUAD\'s Bogoro Research Institute, College of Pharmacy.'
+                    : 'Scientifically backed methodology ensures that this benefit is realized through sustained use and cellular adaptation.'}
                 </p>
               </motion.div>
             ))}
@@ -196,9 +215,13 @@ export function ProductLanding({ product }: { product: Product }) {
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2 space-y-6">
-              <h2 className="text-4xl font-bold">Molecular Transparency</h2>
+              <h2 className="text-4xl font-bold">
+                {product.id === 3 ? 'What\'s Inside AB-MaL' : 'Molecular Transparency'}
+              </h2>
               <p className="text-muted-foreground text-lg">
-                We believe in full disclosure. Every ingredient is ethically sourced and tested for purity levels exceeding industry standards.
+                {product.id === 3
+                  ? 'Every capsule contains only plant-based active compounds — no chemical additives, no fillers. Formulated at ABUAD\'s Bogoro Research Centre and manufactured to NAFDAC standards.'
+                  : 'We believe in full disclosure. Every ingredient is ethically sourced and tested for purity levels exceeding industry standards.'}
               </p>
               <div className="space-y-4">
                 {product.ingredients.map((ing, i) => (
@@ -241,9 +264,13 @@ export function ProductLanding({ product }: { product: Product }) {
         <div className="max-w-5xl mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-4xl font-bold mb-6">Final Step to Wellness</h2>
+              <h2 className="text-4xl font-bold mb-6">
+                {product.id === 3 ? 'Order AB-MaL Today' : 'Final Step to Wellness'}
+              </h2>
               <p className="text-background/60 mb-8 text-lg">
-                Join thousands of others who have transformed their lives with our AI-optimized botanical extracts.
+                {product.id === 3
+                  ? 'Be part of Nigeria\'s nationwide malaria campaign. Order AB-MaL — the homegrown, plant-based anti-malarial from ABUAD\'s Bogoro Research Institute.'
+                  : 'Join thousands of others who have transformed their lives with our university-researched botanical extracts.'}
               </p>
 
               <div className="space-y-6">
@@ -324,6 +351,11 @@ export function ProductLanding({ product }: { product: Product }) {
                 <p className="text-center text-xs text-muted-foreground mt-4">
                   By completing your order, you agree to our Terms of Service and Privacy Policy.
                 </p>
+                {product.cta && (
+                  <p className="text-center text-xs text-muted-foreground mt-2 border-t border-border pt-4">
+                    {product.cta}
+                  </p>
+                )}
               </form>
             </div>
           </div>

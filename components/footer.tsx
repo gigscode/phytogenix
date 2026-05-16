@@ -15,7 +15,7 @@ export function Footer() {
               <span className="font-bold text-2xl tracking-tight">PhytoGenix</span>
             </div>
             <p className="text-white/60 max-w-sm leading-relaxed mb-8">
-              Pioneering the future of herbal clinical research through AI-driven molecular synthesis and digital trial management.
+              Pioneering the future of herbal medicine through university-led research, clinical validation, and evidence-based plant-based therapeutics from ABUAD's Bogoro Research Institute.
             </p>
             <div className="flex gap-4">
               {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (

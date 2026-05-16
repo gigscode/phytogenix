@@ -55,7 +55,7 @@ export function AboutSection() {
               WHO WE ARE
             </div>
             <h2 className="text-4xl font-bold leading-[1.1] md:text-6xl text-slate-900 mb-8">
-              AI-Powered <br />
+              Research-Driven <br />
               <span className="text-emerald-600">Herbal Discovery</span>
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed">

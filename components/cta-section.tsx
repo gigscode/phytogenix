@@ -55,7 +55,7 @@ export function CTASection() {
                 size="lg"
                 className="rounded-none bg-yellow-400 px-10 h-16 text-black font-bold hover:bg-yellow-300 transition-all hover:scale-105"
               >
-                Launch Platform
+                Explore Products
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
@@ -63,7 +63,7 @@ export function CTASection() {
                 variant="outline"
                 className="rounded-none hidden md:block border-white/20 bg-white/10 px-10 h-16 text-white backdrop-blur-md hover:bg-white/20 transition-all"
               >
-                Contact Sales
+                Contact Us
               </Button>
             </motion.div>
 
