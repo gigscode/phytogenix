@@ -1,7 +1,13 @@
 'use client';
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Menu } from "lucide-react";
+import { ArrowRight, Menu, Facebook, Instagram } from "lucide-react";
+
+const TikTokIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+  </svg>
+);
 import { Button } from "./ui/button";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -112,6 +118,17 @@ export function Hero() {
 
           {/* CTA & Mobile Menu */}
           <div className="flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-2">
+              {[
+                { Icon: Facebook, href: '#' },
+                { Icon: Instagram, href: '#' },
+                { Icon: TikTokIcon, href: '#' },
+              ].map(({ Icon, href }, i) => (
+                <a key={i} href={href} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-500 transition-colors text-white/60 hover:text-white">
+                  <Icon />
+                </a>
+              ))}
+            </div>
             <Button className="hidden md:flex rounded-full bg-yellow-400 px-6 text-black hover:bg-yellow-300 transition-transform hover:scale-105 active:scale-95">
               Order Now
             </Button>
