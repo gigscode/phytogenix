@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Shield,
   Truck,
@@ -34,10 +34,6 @@ interface Product {
 
 export function ProductLanding({ product }: { product: Product }) {
   const [isCheckingOut, setIsCheckingOut] = useState(false);
-  const { scrollYProgress } = useScroll();
-
-  const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
 
   const scrollToCheckout = () => {
     const element = document.getElementById('checkout-section');
@@ -71,10 +67,7 @@ export function ProductLanding({ product }: { product: Product }) {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-        <motion.div
-          style={{ opacity, scale }}
-          className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center"
-        >
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -163,7 +156,7 @@ export function ProductLanding({ product }: { product: Product }) {
               </div>
             </div>
           </motion.div>
-        </motion.div>
+        </div>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
           <ChevronDown className="text-muted-foreground" />
