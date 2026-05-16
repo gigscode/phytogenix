@@ -6,6 +6,7 @@ import { CTASection } from '@/components/cta-section';
 import { Footer } from '@/components/footer';
 import { AboutSection } from '@/components/about-us';
 import { ContactSection } from '@/components/contact-section';
+import { TestimonialsSection } from '@/components/testimonials-section';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductsSection />
       <AboutSection />
       <ProcessSection />
+      <TestimonialsSection />
       <CTASection />
       <ContactSection />
       <FAQSection />

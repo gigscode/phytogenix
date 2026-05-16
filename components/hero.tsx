@@ -204,8 +204,9 @@ export function Hero() {
               size="lg"
               variant="outline"
               className="hidden md:block rounded-full border-white/20 bg-white/10 px-8 h-14 text-white backdrop-blur-md hover:bg-white/20 transition-all hover:scale-105"
+              onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              View Research
+              Testimonials
             </Button>
           </motion.div>
 
