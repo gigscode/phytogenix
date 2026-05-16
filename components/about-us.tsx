@@ -68,7 +68,7 @@ export function AboutSection() {
             {[
               {
                 title: "Our Vision",
-                description: "Modernizing herbal medicine research in Africa.",
+                description: "To be Africa's leading centre for plant-based pharmaceutical research — transforming Nigeria's rich botanical heritage into clinically validated, affordable medicines for every household.",
                 icon: Target,
                 color: "bg-slate-900",
                 textColor: "text-white",
@@ -76,7 +76,7 @@ export function AboutSection() {
               },
               {
                 title: "Our Mission",
-                description: "Smarter trials, analytics, and compliance tools.",
+                description: "To research, develop, and deliver safe, NAFDAC-approved herbal therapeutics through rigorous scientific inquiry at ABUAD's Bogoro Research Institute — in partnership with NIMR — making effective healthcare accessible to all Nigerians.",
                 icon: ShieldCheck,
                 color: "bg-emerald-500",
                 textColor: "text-white",

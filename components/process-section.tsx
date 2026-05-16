@@ -6,25 +6,25 @@ const steps = [
   {
     title: "Sourcing & Identification",
     description: "Ethically sourcing rare botanicals and conducting phytochemical screening to identify active molecular compounds.",
-    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=400",
+    image: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&q=80&w=400",
     color: "bg-emerald-500"
   },
   {
     title: "Laboratory Analysis",
     description: "High-precision chromatography and molecular testing to ensure purity and potency.",
-    image: "https://images.unsplash.com/photo-1579152276506-2d829630ff54?auto=format&fit=crop&q=80&w=400",
+    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=400",
     color: "bg-blue-500"
   },
   {
     title: "Predictive Modeling",
     description: "Simulating biological interactions through evidence-based pharmacological research at ABUAD's Bogoro Research Centre before clinical trials.",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400",
+    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=400",
     color: "bg-purple-500"
   },
   {
     title: "Clinical Validation",
     description: "Multi-phase human trials with real-time participant monitoring and data synthesis.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=400",
+    image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=400",
     color: "bg-yellow-500"
   }
 ];

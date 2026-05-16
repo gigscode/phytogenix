@@ -170,8 +170,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60"
           >
-            Herbal Clinical <br />
-            <TypewriterEffect words={["Research Platform", "Trial Ecosystem", "Herbal Discovery", "Lab Analytics"]} />
+            Nature's Answer. <br />
+            <TypewriterEffect words={["Heal Naturally.", "Fight Malaria.", "Boost Immunity.", "Age Gracefully."]} />
           </motion.h1>
 
           {/* Subtext */}
