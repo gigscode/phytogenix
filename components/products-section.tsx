@@ -2,13 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { Star, ArrowRight } from 'lucide-react';
-import { Button } from './ui/button';
 import Link from 'next/link';
 import { products } from '../lib/products';
 
 export function ProductsSection() {
   return (
-    <section className="w-full py-24 px-4 bg-muted/30">
+    <section id="products" className="w-full py-24 px-4 bg-muted/30">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -21,18 +20,8 @@ export function ProductsSection() {
               Research Formulations
             </p>
             <h2 className="text-4xl md:text-6xl font-bold text-foreground">
-              New Discoveries
+              Trusted Formulations
             </h2>
-          </motion.div>
-          <motion.div
-             initial={{ opacity: 0, x: 20 }}
-             whileInView={{ opacity: 1, x: 0 }}
-             viewport={{ once: true }}
-          >
-            <Button variant="outline" className="rounded-full border-emerald-500/20 hover:bg-emerald-500/10">
-              View All Products
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
           </motion.div>
         </div>
 

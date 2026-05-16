@@ -54,6 +54,7 @@ export function CTASection() {
               <Button
                 size="lg"
                 className="rounded-full bg-yellow-400 px-10 h-16 text-black font-bold hover:bg-yellow-300 transition-all hover:scale-105"
+                onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Explore Products
                 <ArrowRight className="ml-2 h-5 w-5" />

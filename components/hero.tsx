@@ -194,6 +194,7 @@ export function Hero() {
             <Button
               size="lg"
               className="rounded-full bg-yellow-400 px-8 h-14 text-black hover:bg-yellow-300 shadow-xl shadow-yellow-400/20 transition-all hover:scale-105"
+              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Products
               <ArrowRight className="ml-2 h-4 w-4" />
