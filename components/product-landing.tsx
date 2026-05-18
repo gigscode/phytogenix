@@ -407,9 +407,9 @@ export function ProductLanding({ product }: { product: Product }) {
             PhytoGenix
           </span>
           <div className="flex gap-8 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms</a>
-            <a href="#" className="hover:text-primary transition-colors">Support</a>
+            <a href="/privacy" className="hover:text-primary transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-primary transition-colors">Terms</a>
+            <a href="/support" className="hover:text-primary transition-colors">Support</a>
           </div>
           <p className="text-sm text-muted-foreground">
             © 2026 PhytoGenix Lab. All rights reserved.

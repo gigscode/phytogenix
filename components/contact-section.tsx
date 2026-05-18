@@ -9,14 +9,14 @@ const contacts = [
   {
     label: "Bogoro Research Institute",
     address: "S.E. Bogoro Centre, Afe Babalola University\nKm 8.5, Afe Babalola Way, Ado-Ekiti\nEkiti State, Nigeria",
-    phone: "+234 803 431 6974",
+    phone: "+234 701 689 7605",
     email: "bogoro@abuad.edu.ng",
     mapUrl: "https://maps.google.com/?q=Afe+Babalola+University+Ado-Ekiti",
   },
   {
     label: "College of Pharmacy, ABUAD",
     address: "College of Pharmacy\nAfe Babalola University, PMB 5454\nAdo-Ekiti, Ekiti State, Nigeria",
-    phone: "+234 800 000 0000",
+    phone: "+234 701 689 7605",
     email: "pharmacy@abuad.edu.ng",
     mapUrl: "https://maps.google.com/?q=Afe+Babalola+University+Ado-Ekiti",
   },

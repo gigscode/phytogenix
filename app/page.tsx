@@ -8,6 +8,7 @@ import { AboutSection } from '@/components/about-us';
 import { ContactSection } from '@/components/contact-section';
 import { TestimonialsSection } from '@/components/testimonials-section';
 import { SocialStrip } from '@/components/social-strip';
+import { WhatsAppButton } from '@/components/whatsapp-button';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <ContactSection />
       <FAQSection />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }

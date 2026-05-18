@@ -66,7 +66,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-emerald-500" />
-                <span>+234 800 PhytoGenix</span>
+                <span>+234 701 689 7605</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-emerald-500 mt-1" />
@@ -81,9 +81,9 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8 text-xs font-bold uppercase tracking-widest text-white/20">
             <p>© 2026 PhytoGenix LABS. ALL RIGHTS RESERVED.</p>
             <div className="flex gap-8">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="/support" className="hover:text-white transition-colors">Support</a>
             </div>
           </div>
 
