@@ -7,6 +7,7 @@ import { Footer } from '@/components/footer';
 import { AboutSection } from '@/components/about-us';
 import { ContactSection } from '@/components/contact-section';
 import { TestimonialsSection } from '@/components/testimonials-section';
+import { SocialStrip } from '@/components/social-strip';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutSection />
       <ProcessSection />
       <TestimonialsSection />
+      <SocialStrip />
       <CTASection />
       <ContactSection />
       <FAQSection />

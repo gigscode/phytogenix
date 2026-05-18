@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { SocialStrip } from './social-strip';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Shield,
@@ -290,7 +291,7 @@ export function ProductLanding({ product }: { product: Product }) {
                   <Shield className="w-6 h-6 text-primary" />
                   <div>
                     <p className="font-bold">Secure Transaction</p>
-                    <p className="text-sm text-background/60">256-bit SSL encrypted checkout</p>
+                    <p className="text-sm text-background/60">Your order is safe and protected</p>
                   </div>
                 </div>
               </div>
@@ -396,6 +397,8 @@ export function ProductLanding({ product }: { product: Product }) {
           )}
         </AnimatePresence>
       </section>
+
+      <SocialStrip />
 
       {/* Footer */}
       <footer className="py-12 border-t border-border/50">
