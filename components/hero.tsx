@@ -89,13 +89,13 @@ export function Hero() {
           className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6"
         >
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-3">
             <img
-              src="/phyto-logone.png"
-              alt="Phytogenix"
+              src="/Phytogenixlogwhite.png"
+              alt="PhytoGenix"
               className="h-10 w-auto object-contain"
             />
-            <span className="text-lg font-semibold tracking-widest text-white">PHYTOGENIX</span>
+            <span className="text-lg font-bold tracking-widest text-white">PHYTOGENIX</span>
           </Link>
 
           {/* Nav */}
@@ -146,9 +146,8 @@ export function Hero() {
               <SheetContent side="right" className="w-[300px] bg-[#050816] border-white/10 text-white p-10">
                 <SheetHeader className="mb-8 text-left">
                   <SheetTitle className="text-white flex items-center gap-2">
-                    <Link href="/" className="flex items-center gap-2">
-                      <div className="h-6 w-6 rounded-none bg-emerald-500" />
-                      Phytogenix
+                    <Link href="/">
+                      <img src="/Phytogenixlogwhite.png" alt="PhytoGenix" className="h-7 w-auto object-contain" />
                     </Link>
                   </SheetTitle>
                 </SheetHeader>

@@ -6,7 +6,8 @@ export const metadata: Metadata = {
   title: 'PhytoGenix - Advanced Herbal Clinical Research Platform',
   description: 'PhytoGenix is a cutting-edge platform for managing herbal clinical research, laboratory results, and regulatory compliance.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/Phytogenixlogwhite.png',
+    apple: '/Phytogenixlogwhite.png',
   },
 }
 

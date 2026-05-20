@@ -1,4 +1,4 @@
-import { Beaker, Mail, MapPin, Phone, Instagram, Facebook } from 'lucide-react';
+import { Mail, MapPin, Phone, Instagram, Facebook } from 'lucide-react';
 
 const TikTokIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
@@ -15,10 +15,8 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-none bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20">
-                <Beaker className="w-6 h-6 text-white" />
-              </div>
-              <span className="font-bold text-2xl tracking-tight">PhytoGenix</span>
+              <img src="/Phytogenixlogwhite.png" alt="PhytoGenix" className="h-10 w-auto object-contain" />
+              <span className="font-bold text-2xl tracking-widest text-white">PHYTOGENIX</span>
             </div>
             <p className="text-white/60 max-w-sm leading-relaxed mb-8">
               Pioneering the future of herbal medicine through university-led research, clinical validation, and evidence-based plant-based therapeutics from ABUAD's Bogoro Research Institute.
