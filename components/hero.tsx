@@ -90,8 +90,12 @@ export function Hero() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="h-9 w-9 rounded-none bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.5)]" />
-            <h1 className="text-lg font-semibold tracking-wide">Phytogenix</h1>
+            <img
+              src="/phyto-logone.png"
+              alt="Phytogenix"
+              className="h-10 w-auto object-contain"
+            />
+            <span className="text-lg font-semibold tracking-widest text-white">PHYTOGENIX</span>
           </Link>
 
           {/* Nav */}
@@ -175,7 +179,7 @@ export function Hero() {
       </header>
 
       {/* Hero Content */}
-      <div className="relative z-20 flex min-h-screen items-center justify-center px-6 text-center">
+      <div className="relative z-20 flex min-h-screen items-center justify-center px-6 pt-24 text-center">
         <motion.div
           style={{ opacity }}
           className="max-w-5xl"

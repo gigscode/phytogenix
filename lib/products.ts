@@ -26,7 +26,7 @@ export const products = [
   {
     id: 2,
     name: 'Virucidine',
-    price: 'N10,000',
+    price: 'N15,000',
     rating: 5.0,
     image: '/virucidine.png',
     description: 'Defend your health with Africa\'s scientifically validated immune shield. ABUAD Herbal Virucidine Liquid is NAFDAC-approved and clinically evaluated by NIMR — a plant-based antiviral liquid that clears viral symptoms in as little as 3–7 days, with zero recorded adverse effects.',
@@ -48,7 +48,7 @@ export const products = [
   {
     id: 3,
     name: 'AB-MaL',
-    price: 'N15,000',
+    price: 'N10,000',
     rating: 4.8,
     image: '/ABMol_hd.png',
     description: 'AB-MaL is Nigeria\'s homegrown answer to malaria — an organic, plant-based anti-malarial capsule researched and manufactured at the Bogoro Research Institute, College of Pharmacy, Afe Babalola University (ABUAD). Developed as an affordable, NAFDAC-compliant herbal therapy, AB-MaL is built for every Nigerian household. No chemical additives. Just nature, science, and a commitment to ending malaria in Africa.',
