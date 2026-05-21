@@ -133,13 +133,13 @@ export function Hero() {
                 </a>
               ))}
             </div>
-            <Button className="hidden md:flex rounded-full bg-yellow-400 px-6 text-black hover:bg-yellow-300 transition-transform hover:scale-105 active:scale-95">
+            <Button className="hidden lg:flex rounded-full bg-yellow-400 px-6 text-black hover:bg-yellow-300 transition-transform hover:scale-105 active:scale-95">
               Order Now
             </Button>
 
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden text-white hover:bg-white/10">
+                <Button variant="ghost" size="icon" className="lg:hidden text-white hover:bg-white/10">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
